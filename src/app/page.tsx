@@ -1,80 +1,336 @@
+"use client";
 import React from "react";
-import Navbar from "@/components/sections/Navbar";
-import Hero from "@/components/sections/Hero";
-import Education from "@/components/sections/Education";
-import Skills from "@/components/sections/Skills";
-import Experience from "@/components/sections/Experience";
-import Projects from "@/components/sections/Projects";
-import Footer from "@/components/sections/Footer";
-import About from "@/components/sections/About";
-
+import ThemeToggleButton from "@/components/ui/theme-toggle-button";
+import TextType from "@/components/ui/text/TextType/TextType";
+import PixelTransition from "@/components/ui/text/PixelTransition/PixelTransition";
+import { useTheme } from "next-themes";
+import { MapPin, Phone, Mail, FileText } from "lucide-react";
+import ItalicLine from "@/components/ui/ItalicLine";
+import Title from "@/components/ui/Title";
+import SingleContainer from "@/components/ui/SingleContainer";
+import DoubleBoxLine from "@/components/ui/DoubleBoxLine";
+import MainProjectContainer from "@/components/ui/MainProjectContainer";
+import MainPjConWrapper from "@/components/ui/MainPjConWrapper";
 export default function Home() {
+  const { resolvedTheme } = useTheme();
+  const pixelColor = resolvedTheme === "dark" ? "#000000" : "#ffffff";
   return (
-    <div className="min-h-screen flex flex-col bg-black">
-      {/* <Navbar /> */}
-      <div className=" max-w-6xl mx-auto">
-        <Hero />
-        {/* <About/> */}
-        {/* <Education />
-      <Skills />
-      <Experience /> */}
-        <div className="border rounded-3xl p-2 border-zinc-800 text-white">
-          <div className="bg-[#232323] rounded-2xl p-6">
-            <div className="font-opensans-bold rounded-full px-4 w-fit border border-white/10 text-2xl">
-              Major projects
+    <div className="min-h-screen flex flex-col  ">
+      <div className="y-border h-12 mt-2">
+        <div className="max-w-3xl x-border h-full mx-auto flex justify-between items-center">
+          <div className="px-4">
+            <div className="font-sharpie-bold text-2xl">SSB</div>
+          </div>
+          <ThemeToggleButton variant="circle" start="center" />
+        </div>
+      </div>
+
+      <div className=" w-full">
+        <div className="max-w-3xl h-[150px] x-border mx-auto dotted-bg flex items-center justify-center">
+          <div className="font-sharpie-bold text-8xl">SSB</div>
+        </div>
+      </div>
+
+      <div className="y-border">
+        <div className="max-w-3xl flex x-border mx-auto ">
+          <div className="border-r border-zinc-800">
+            <div className="border border-zinc-800 p-1 rounded-full w-fit">
+              <div className="w-[150px] h-[150px] rounded-full overflow-hidden">
+                <PixelTransition
+                  firstContent={
+                    <img
+                      src="/profile-ghibli.jpg"
+                      alt="default pixel transition content, a cat!"
+                    />
+                  }
+                  secondContent={
+                    <img
+                      src="/profile.jpg"
+                      alt="default pixel transition content, a cat!"
+                      className="-translate-y-2"
+                    />
+                  }
+                  gridSize={12}
+                  pixelColor={pixelColor}
+                  animationStepDuration={0.4}
+                  className="custom-pixel-card"
+                />
+              </div>
             </div>
-            <div className="grid grid-cols-3 gap-4 p-4 ">
-              <div className="bg-[#252525] p-1 rounded-2xl max-w-xs shadow-lg shadow-black/30 border border-white/5 w-full">
-                <div className="border-3 border-[#3e3e3e] shadow-lg shadow-black/20 rounded-xl aspect-video overflow-hidden w-full">
-                  <img
-                    src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                    alt=""
-                  />
-                </div>
-                <div className="px-2 py-6">
-                  <h2>Project Name</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Expedita, commodi!
-                  </p>
-                </div>
+          </div>
+          <div className="w-full">
+            <div className="italic-lines-bg h-24 w-full"></div>
+            <div>
+              <div className="text-3xl pl-4 y-border">
+                Sudhansu Sekhar Behera
               </div>
-              <div className="bg-[#252525] p-1 rounded-2xl max-w-xs shadow-lg shadow-black/30 border border-white/5 w-full">
-                <div className="border-3 border-[#3e3e3e] shadow-lg shadow-black/20 rounded-xl aspect-video overflow-hidden w-full">
-                  <img
-                    src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                    alt=""
-                  />
-                </div>
-                <div className="px-2 py-6">
-                  <h2>Project Name</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Expedita, commodi!
-                  </p>
-                </div>
-              </div>
-              <div className="bg-[#252525] p-1 rounded-2xl max-w-xs shadow-lg shadow-black/30 border border-white/5 w-full">
-                <div className="border-3 border-[#3e3e3e] shadow-lg shadow-black/20 rounded-xl aspect-video overflow-hidden w-full">
-                  <img
-                    src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                    alt=""
-                  />
-                </div>
-                <div className="px-2 py-6">
-                  <h2>Project Name</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Expedita, commodi!
-                  </p>
-                </div>
+              <div className="pl-4">
+                <TextType
+                  text={[
+                    "Frontend Developer",
+                    "Backend Developer",
+                    "Fullstack Developer",
+                    "ReactJs Developer",
+                    "ReactJs Game Developer",
+                  ]}
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={true}
+                  cursorCharacter="|"
+                />
               </div>
             </div>
           </div>
         </div>
-        <Projects />
-        <Footer />
       </div>
+      <ItalicLine />
+      <SingleContainer>
+        <ul className="space-y-4">
+          <li className="flex items-center space-x-3">
+            <MapPin className="w-5 h-5 text-zinc-600 dark:text-zinc-300" />
+            <span className="text-zinc-800 dark:text-zinc-100">
+              From Odisha, India
+            </span>
+          </li>
+          <li className="flex items-center space-x-3">
+            <Mail className="w-5 h-5 text-zinc-600 dark:text-zinc-300" />
+            <span className="text-zinc-800 dark:text-zinc-100">
+              sudhansusekharweb@gmail.com
+            </span>
+          </li>
+          <li className="flex items-center space-x-3">
+            <Phone className="w-5 h-5 text-zinc-600 dark:text-zinc-300" />
+            <span className="text-zinc-800 dark:text-zinc-100">9876543210</span>
+          </li>
+          <li className="flex items-center space-x-3">
+            <FileText className="w-5 h-5 text-zinc-600 dark:text-zinc-300" />
+            <span className="text-zinc-800 dark:text-zinc-100">Resume</span>
+          </li>
+        </ul>
+      </SingleContainer>
+      <ItalicLine />
+      <Title title="About" />
+      <SingleContainer>
+        <ul>
+          <li>
+            <span>From odisha,India</span>
+          </li>
+          <li>
+            <span>sudhansusekharweb@gmail.com</span>
+          </li>
+          <li>
+            <span>9876543210</span>
+          </li>
+          <li>
+            <span>resume</span>
+          </li>
+        </ul>
+      </SingleContainer>
+      <ItalicLine />
+      <Title title="Stack" />
+      <SingleContainer>
+        <ul>
+          <li>
+            <span>From odisha,India</span>
+          </li>
+          <li>
+            <span>sudhansusekharweb@gmail.com</span>
+          </li>
+          <li>
+            <span>9876543210</span>
+          </li>
+          <li>
+            <span>resume</span>
+          </li>
+        </ul>
+      </SingleContainer>
+      <ItalicLine />
+      <Title title="Projects" />
+      <DoubleBoxLine />
+      <MainPjConWrapper>
+        <div className="gap-4 grid grid-cols-2">
+          <MainProjectContainer />
+          <MainProjectContainer />
+        </div>
+      </MainPjConWrapper>
+      <DoubleBoxLine />
+      <MainPjConWrapper>
+        <div className="gap-4 grid grid-cols-2">
+          <MainProjectContainer />
+          <MainProjectContainer />
+        </div>
+      </MainPjConWrapper>
+      <DoubleBoxLine />
+      <div className="y-border">
+        <div className="max-w-3xl  h-[25px] x-border mx-auto">
+          view all projects
+        </div>
+      </div>
+      <ItalicLine />
+      <Title title="Experience" />
+      <SingleContainer>
+        <div>
+          <div>
+            <span>logo</span>
+            <span>mrpshop.in</span>
+          </div>
+          <div>
+            <div>
+              frontend developer
+              <span>Internship | 2024-present</span>
+            </div>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </SingleContainer>
+      <SingleContainer>
+        <div>
+          <div>
+            <span>logo</span>
+            <span>mrpshop.in</span>
+          </div>
+          <div>
+            <div>
+              frontend developer
+              <span>Internship | 2024-present</span>
+            </div>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </SingleContainer>
+      <SingleContainer>
+        <div>
+          <div>
+            <span>logo</span>
+            <span>mrpshop.in</span>
+          </div>
+          <div>
+            <div>
+              frontend developer
+              <span>Internship | 2024-present</span>
+            </div>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                repudiandae.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </SingleContainer>
+      <ItalicLine />
+      <SingleContainer>
+        <div>
+          <div>
+            <span>logo</span>
+            <span>mrpshop.in</span>
+          </div>
+          <div>
+            <div>
+              Mecanical engineer
+              <span>Internship | 2024-present</span>
+            </div>
+          </div>
+        </div>
+      </SingleContainer>
+      <SingleContainer>
+        <div>
+          <div>
+            <span>logo</span>
+            <span>mrpshop.in</span>
+          </div>
+          <div>
+            <div>
+              Mecanical engineer
+              <span>Internship | 2024-present</span>
+            </div>
+          </div>
+        </div>
+      </SingleContainer>
+      <ItalicLine />
+      <Title title="Link" />
+      <DoubleBoxLine />
+      <div className="y-border">
+        <div className=" w-full  gap-4 grid grid-cols-2 mx-auto max-w-3xl ">
+          <div className="h-full x-border p-2">
+            <div>
+              <h2>logo</h2>
+              <div>
+                <span>linkedin</span>
+                <span>sudhansu sekhar behera</span>
+              </div>
+            </div>
+          </div>
+          <div className="h-full x-border p-2">
+            <div>
+              <h2>github logo</h2>
+              <div>
+                <span>github</span>
+                <span>@skehargit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <DoubleBoxLine />
     </div>
   );
 }
