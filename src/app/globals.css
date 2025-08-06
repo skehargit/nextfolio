@@ -97,7 +97,7 @@
   --border: oklch(0.92 0.004 286.32);
 
   /* color-mix */
-  --edge: color-mix(in oklab, var(--border) 64%, var(--background));
+  --edge: color-mix(in oklab, var(--border) 50%, var(--background));
 
   /* zinc-200 */
   --input: oklch(0.92 0.004 286.32);

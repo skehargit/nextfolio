@@ -87,44 +87,106 @@ export default function Home() {
       <SingleContainer>
         <ul className="space-y-4">
           <li className="flex items-center space-x-3">
-            <MapPin className="w-5 h-5 text-zinc-600 dark:text-zinc-300" />
-            <span className="text-zinc-800 dark:text-zinc-100">
-              From Odisha, India
-            </span>
+            <MapPin className="w-5 h-5 " />
+            <span className="">From Odisha, India</span>
           </li>
           <li className="flex items-center space-x-3">
-            <Mail className="w-5 h-5 text-zinc-600 dark:text-zinc-300" />
-            <span className="text-zinc-800 dark:text-zinc-100">
-              sudhansusekharweb@gmail.com
-            </span>
+            <Mail className="w-5 h-5 " />
+            <span className="">sudhansusekharweb@gmail.com</span>
           </li>
           <li className="flex items-center space-x-3">
-            <Phone className="w-5 h-5 text-zinc-600 dark:text-zinc-300" />
-            <span className="text-zinc-800 dark:text-zinc-100">9876543210</span>
+            <Phone className="w-5 h-5 " />
+            <span className="">9876543210</span>
           </li>
           <li className="flex items-center space-x-3">
-            <FileText className="w-5 h-5 text-zinc-600 dark:text-zinc-300" />
-            <span className="text-zinc-800 dark:text-zinc-100">Resume</span>
+            <FileText className="w-5 h-5 " />
+            <span className="">Resume</span>
           </li>
         </ul>
       </SingleContainer>
       <ItalicLine />
       <Title title="About" />
       <SingleContainer>
-        <ul>
-          <li>
-            <span>From odisha,India</span>
-          </li>
-          <li>
-            <span>sudhansusekharweb@gmail.com</span>
-          </li>
-          <li>
-            <span>9876543210</span>
-          </li>
-          <li>
-            <span>resume</span>
-          </li>
-        </ul>
+        <div className="text-sm space-y-6 text-left">
+          <p className="leading-relaxed">
+            Hi, I’m <span className=" pb-0.5">Sudhansu Sekhar Behera</span> — a
+            passionate <span className=" pb-0.5">MERN stack developer</span>
+          </p>
+
+          <p className="leading-relaxed">
+            I work with a wide range of tools and technologies including{" "}
+            <span className=" pb-0.5">React</span>,{" "}
+            <span className=" pb-0.5">Next.js</span>,{" "}
+            <span className=" pb-0.5">JavaScript</span>,{" "}
+            <span className=" pb-0.5">TypeScript</span>,{" "}
+            <span className=" pb-0.5">Node.js</span>,{" "}
+            <span className=" pb-0.5">Express</span>,{" "}
+            <span className=" pb-0.5">MongoDB</span>,{" "}
+            <span className=" pb-0.5">Redux</span>,{" "}
+            <span className=" pb-0.5">Django</span>,{" "}
+            <span className=" pb-0.5">HTML</span>,{" "}
+            <span className=" pb-0.5">CSS</span>,{" "}
+            <span className=" pb-0.5">Tailwind CSS</span>,{" "}
+            <span className=" pb-0.5">GSAP</span>,{" "}
+            <span className=" pb-0.5">Framer Motion</span>, and{" "}
+            <span className=" pb-0.5">Photoshop</span>.
+          </p>
+
+          <p className="leading-relaxed">
+            Currently, I’m interning at two amazing companies:
+          </p>
+
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              🖥️ <span className=" pb-0.5">Frontend Developer at</span>{" "}
+              <a
+                href="https://mrpshop.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                mrpshop.in
+              </a>{" "}
+              – contributing to modern UI development using{" "}
+              <span className=" pb-0.5">React</span> +{" "}
+              <span className=" pb-0.5">Tailwind CSS</span>. Also working on the
+              backend with <span className=" pb-0.5">Django</span> and
+              implementing AI for{" "}
+              <span className=" pb-0.5">text generation</span>,{" "}
+              <span className=" pb-0.5">image generation</span>, and{" "}
+              <span className=" pb-0.5">content automation</span>. Currently
+              exploring and optimizing AI tools for the MRP system.
+            </li>
+
+            <li>
+              🎮 <span className=" pb-0.5">Game Developer at</span>{" "}
+              <a
+                href="https://eklavya.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                eklavya.me
+              </a>{" "}
+              – building games with React + Tailwind CSS.
+            </li>
+          </ul>
+
+          <p className="leading-relaxed">
+            I regularly explore design platforms like{" "}
+            <span className=" pb-0.5">Pinterest</span>,{" "}
+            <span className=" pb-0.5">dribbble.com</span>, and{" "}
+            <span className=" pb-0.5">awwwards.com</span> to stay inspired and
+            keep my UI skills sharp.
+          </p>
+
+          <p className="leading-relaxed">
+            I’m always open to <span className=" pb-0.5">collaboration</span>,{" "}
+            <span className=" pb-0.5">learning</span>, and{" "}
+            <span className=" pb-0.5">new opportunities</span>. Let’s connect
+            and build something amazing together! 🚀
+          </p>
+        </div>
       </SingleContainer>
       <ItalicLine />
       <Title title="Stack" />
@@ -277,6 +339,7 @@ export default function Home() {
         </div>
       </SingleContainer>
       <ItalicLine />
+      <Title title="Education" />
       <SingleContainer>
         <div>
           <div>
