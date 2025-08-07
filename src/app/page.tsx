@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import ThemeToggleButton from "@/components/ui/theme-toggle-button";
 import TextType from "@/components/ui/text/TextType/TextType";
@@ -16,6 +16,7 @@ import About from "@/components/sections/About";
 import Experience from "@/components/sections/Experience";
 import Education from "@/components/sections/Education";
 import SocialLinks from "@/components/sections/SocialLinks";
+import GitHubCalendar from "react-github-calendar";
 export default function Home() {
   const { resolvedTheme } = useTheme();
   const pixelColor = resolvedTheme === "dark" ? "#000000" : "#ffffff";
@@ -33,6 +34,7 @@ export default function Home() {
       lenis.destroy();
     };
   }, []);
+
   return (
     <div className="min-h-screen flex flex-col  ">
       <div className="y-border h-12 mt-2">
@@ -129,22 +131,18 @@ export default function Home() {
         <About />
       </SingleContainer>
       <ItalicLine />
-      <Title title="Stack" />
+      {/* <Title title="Stack" /> */}
+      <Title title="Github Contributions" />
       <SingleContainer>
-        <ul>
-          <li>
-            <span>From odisha,India</span>
-          </li>
-          <li>
-            <span>sudhansusekharweb@gmail.com</span>
-          </li>
-          <li>
-            <span>9876543210</span>
-          </li>
-          <li>
-            <span>resume</span>
-          </li>
-        </ul>
+        <div className="w-full flex justify-center">
+          <GitHubCalendar
+            username="skehargit"
+            blockSize={9}
+            colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
+            blockRadius={20}
+            fontSize={12}
+          />
+        </div>
       </SingleContainer>
       <ItalicLine />
       <Title title="Projects" />
