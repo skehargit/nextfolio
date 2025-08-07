@@ -1,10 +1,34 @@
 import React from "react";
 
-const Education = () => (
-  <section id="education" className="py-16 px-8 bg-white dark:bg-gray-900">
-    <h2 className="text-2xl font-bold mb-4">Education</h2>
-    {/* Add your education details here */}
-  </section>
+const Education = ({
+  logoSrc,
+  name,
+  course,
+  duration,
+}: {
+  logoSrc: string;
+  name: string;
+  course: string;
+  duration: string;
+}) => (
+  <div className="p-4 s-border  rounded-md   space-y-2">
+    <div className="flex items-center space-x-2">
+      <div className="h-8 w-8 flex items-center justify-center">
+        <img
+          src={logoSrc}
+          alt={`${name} logo`}
+          className="w-full h-full object-contain rounded-sm"
+        />
+      </div>
+      <span className="text-md font-semibold uppercase">{name}</span>
+    </div>
+
+    <div className="text-xs ">
+      <span className="font-medium">{course}</span>
+      <span className="mx-1">|</span>
+      <span>{duration}</span>
+    </div>
+  </div>
 );
 
 export default Education;

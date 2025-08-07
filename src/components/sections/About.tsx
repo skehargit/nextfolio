@@ -2,35 +2,84 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="w-full flex flex-col md:flex-row max-w-4xl items-center md:items-start gap-6 md:gap-8 border-2 border-zinc-800 border-dashed rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 my-8 mx-auto">
-      {/* Left: Profile Image */}
-      <div className=" w-full  max-w-80 overflow-hidden rounded-xl shadow-md mb-4 md:mb-0">
-        <img
-          src="/IMG_1008.jpg"
-          alt="Profile"
-          className="object-cover w-full h-full"
-        />
-      </div>
-      {/* Right: About Content */}
-      <div className="flex-1 text-white">
-        <p className="text-lg mb-3 font-opensans-semibold">
-          I’m Sudhansu Sekhar Behera from Odisha, a mechanical engineering
-          graduate turned self-taught web developer. I love building clean,
-          responsive UIs and interactive experiences.
-        </p>
+    <section className="text-sm space-y-6 text-left">
+      <p className="leading-relaxed">
+        Hi, I’m <span className=" pb-0.5">Sudhansu Sekhar Behera</span> — a
+        passionate <span className=" pb-0.5">MERN stack developer</span>
+      </p>
 
-        <p className="text-gray-300 mb-3">
-          Currently interning as a frontend developer at mrpshop.in and a game
-          developer at eklavya.me, I’m focused on sharpening my skills through
-          real-world projects.
-        </p>
+      <p className="leading-relaxed">
+        I work with a wide range of tools and technologies including{" "}
+        <span className=" pb-0.5">React</span>,{" "}
+        <span className=" pb-0.5">Next.js</span>,{" "}
+        <span className=" pb-0.5">JavaScript</span>,{" "}
+        <span className=" pb-0.5">TypeScript</span>,{" "}
+        <span className=" pb-0.5">Node.js</span>,{" "}
+        <span className=" pb-0.5">Express</span>,{" "}
+        <span className=" pb-0.5">MongoDB</span>,{" "}
+        <span className=" pb-0.5">Redux</span>,{" "}
+        <span className=" pb-0.5">Django</span>,{" "}
+        <span className=" pb-0.5">HTML</span>,{" "}
+        <span className=" pb-0.5">CSS</span>,{" "}
+        <span className=" pb-0.5">Tailwind CSS</span>,{" "}
+        <span className=" pb-0.5">GSAP</span>,{" "}
+        <span className=" pb-0.5">Framer Motion</span>, and{" "}
+        <span className=" pb-0.5">Photoshop</span>.
+      </p>
 
-        <p className="text-gray-300 mb-4">
-          I started with HTML & CSS, moved to JavaScript and React, explored
-          backend basics, REST APIs, and added animations using GSAP & Framer
-          Motion. Always learning, building, and improving.
-        </p>
-      </div>
+      <p className="leading-relaxed">
+        Currently, I’m interning at two amazing companies:
+      </p>
+
+      <ul className="list-disc list-inside space-y-2">
+        <li>
+          🖥️ <span className=" pb-0.5">Frontend Developer at</span>{" "}
+          <a
+            href="https://mrpshop.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            mrpshop.in
+          </a>{" "}
+          – contributing to modern UI development using{" "}
+          <span className=" pb-0.5">React</span> +{" "}
+          <span className=" pb-0.5">Tailwind CSS</span>. Also working on the
+          backend with <span className=" pb-0.5">Django</span> and implementing
+          AI for <span className=" pb-0.5">text generation</span>,{" "}
+          <span className=" pb-0.5">image generation</span>, and{" "}
+          <span className=" pb-0.5">content automation</span>. Currently
+          exploring and optimizing AI tools for the MRP system.
+        </li>
+
+        <li>
+          🎮 <span className=" pb-0.5">Game Developer at</span>{" "}
+          <a
+            href="https://eklavya.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            eklavya.me
+          </a>{" "}
+          – building games with React + Tailwind CSS.
+        </li>
+      </ul>
+
+      <p className="leading-relaxed">
+        I regularly explore design platforms like{" "}
+        <span className=" pb-0.5">Pinterest</span>,{" "}
+        <span className=" pb-0.5">dribbble.com</span>, and{" "}
+        <span className=" pb-0.5">awwwards.com</span> to stay inspired and keep
+        my UI skills sharp.
+      </p>
+
+      <p className="leading-relaxed">
+        I’m always open to <span className=" pb-0.5">collaboration</span>,{" "}
+        <span className=" pb-0.5">learning</span>, and{" "}
+        <span className=" pb-0.5">new opportunities</span>. Let’s connect and
+        build something amazing together! 🚀
+      </p>
     </section>
   );
 };

@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 import ThemeToggleButton from "@/components/ui/theme-toggle-button";
 import TextType from "@/components/ui/text/TextType/TextType";
 import PixelTransition from "@/components/ui/text/PixelTransition/PixelTransition";
@@ -11,9 +12,27 @@ import SingleContainer from "@/components/ui/SingleContainer";
 import DoubleBoxLine from "@/components/ui/DoubleBoxLine";
 import MainProjectContainer from "@/components/ui/MainProjectContainer";
 import MainPjConWrapper from "@/components/ui/MainPjConWrapper";
+import About from "@/components/sections/About";
+import Experience from "@/components/sections/Experience";
+import Education from "@/components/sections/Education";
+import SocialLinks from "@/components/sections/SocialLinks";
 export default function Home() {
   const { resolvedTheme } = useTheme();
   const pixelColor = resolvedTheme === "dark" ? "#000000" : "#ffffff";
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const lenis = new Lenis({
+      lerp: 0.1,
+    });
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
   return (
     <div className="min-h-screen flex flex-col  ">
       <div className="y-border h-12 mt-2">
@@ -107,86 +126,7 @@ export default function Home() {
       <ItalicLine />
       <Title title="About" />
       <SingleContainer>
-        <div className="text-sm space-y-6 text-left">
-          <p className="leading-relaxed">
-            Hi, I’m <span className=" pb-0.5">Sudhansu Sekhar Behera</span> — a
-            passionate <span className=" pb-0.5">MERN stack developer</span>
-          </p>
-
-          <p className="leading-relaxed">
-            I work with a wide range of tools and technologies including{" "}
-            <span className=" pb-0.5">React</span>,{" "}
-            <span className=" pb-0.5">Next.js</span>,{" "}
-            <span className=" pb-0.5">JavaScript</span>,{" "}
-            <span className=" pb-0.5">TypeScript</span>,{" "}
-            <span className=" pb-0.5">Node.js</span>,{" "}
-            <span className=" pb-0.5">Express</span>,{" "}
-            <span className=" pb-0.5">MongoDB</span>,{" "}
-            <span className=" pb-0.5">Redux</span>,{" "}
-            <span className=" pb-0.5">Django</span>,{" "}
-            <span className=" pb-0.5">HTML</span>,{" "}
-            <span className=" pb-0.5">CSS</span>,{" "}
-            <span className=" pb-0.5">Tailwind CSS</span>,{" "}
-            <span className=" pb-0.5">GSAP</span>,{" "}
-            <span className=" pb-0.5">Framer Motion</span>, and{" "}
-            <span className=" pb-0.5">Photoshop</span>.
-          </p>
-
-          <p className="leading-relaxed">
-            Currently, I’m interning at two amazing companies:
-          </p>
-
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              🖥️ <span className=" pb-0.5">Frontend Developer at</span>{" "}
-              <a
-                href="https://mrpshop.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                mrpshop.in
-              </a>{" "}
-              – contributing to modern UI development using{" "}
-              <span className=" pb-0.5">React</span> +{" "}
-              <span className=" pb-0.5">Tailwind CSS</span>. Also working on the
-              backend with <span className=" pb-0.5">Django</span> and
-              implementing AI for{" "}
-              <span className=" pb-0.5">text generation</span>,{" "}
-              <span className=" pb-0.5">image generation</span>, and{" "}
-              <span className=" pb-0.5">content automation</span>. Currently
-              exploring and optimizing AI tools for the MRP system.
-            </li>
-
-            <li>
-              🎮 <span className=" pb-0.5">Game Developer at</span>{" "}
-              <a
-                href="https://eklavya.me/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                eklavya.me
-              </a>{" "}
-              – building games with React + Tailwind CSS.
-            </li>
-          </ul>
-
-          <p className="leading-relaxed">
-            I regularly explore design platforms like{" "}
-            <span className=" pb-0.5">Pinterest</span>,{" "}
-            <span className=" pb-0.5">dribbble.com</span>, and{" "}
-            <span className=" pb-0.5">awwwards.com</span> to stay inspired and
-            keep my UI skills sharp.
-          </p>
-
-          <p className="leading-relaxed">
-            I’m always open to <span className=" pb-0.5">collaboration</span>,{" "}
-            <span className=" pb-0.5">learning</span>, and{" "}
-            <span className=" pb-0.5">new opportunities</span>. Let’s connect
-            and build something amazing together! 🚀
-          </p>
-        </div>
+        <About />
       </SingleContainer>
       <ItalicLine />
       <Title title="Stack" />
@@ -231,168 +171,77 @@ export default function Home() {
       <ItalicLine />
       <Title title="Experience" />
       <SingleContainer>
-        <div>
-          <div>
-            <span>logo</span>
-            <span>mrpshop.in</span>
-          </div>
-          <div>
-            <div>
-              frontend developer
-              <span>Internship | 2024-present</span>
-            </div>
-            <ul>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-            </ul>
-          </div>
-        </div>
+        <Experience
+          logoSrc="https://eklavya.me/wp-content/uploads/2023/05/eklogoup.png"
+          company="eklavya.me"
+          website="https://eklavya.me"
+          position="Game Developer"
+          duration="Jul 2024 - Present"
+          description={[
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+          ]}
+        />
       </SingleContainer>
       <SingleContainer>
-        <div>
-          <div>
-            <span>logo</span>
-            <span>mrpshop.in</span>
-          </div>
-          <div>
-            <div>
-              frontend developer
-              <span>Internship | 2024-present</span>
-            </div>
-            <ul>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-            </ul>
-          </div>
-        </div>
+        <Experience
+          logoSrc="https://res.cloudinary.com/db7pikwo4/image/upload/v1754579764/MRPICON_dhyfzz.jpg"
+          company="mrpshop.in"
+          website="https://mrpshop.in"
+          position="Frontend Developer"
+          duration="Nov 2024 - Present"
+          description={[
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+          ]}
+        />
       </SingleContainer>
       <SingleContainer>
-        <div>
-          <div>
-            <span>logo</span>
-            <span>mrpshop.in</span>
-          </div>
-          <div>
-            <div>
-              frontend developer
-              <span>Internship | 2024-present</span>
-            </div>
-            <ul>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                repudiandae.
-              </li>
-            </ul>
-          </div>
-        </div>
+        <Experience
+          logoSrc="https://res.cloudinary.com/db7pikwo4/image/upload/v1754579904/1721203270689_cjmvud.jpg"
+          company="highimpacttalent.com"
+          website="https://highimpacttalent.com"
+          position="Fullstack Developer"
+          duration="Jul 2024 - Aug 2024"
+          description={[
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+          ]}
+        />
       </SingleContainer>
+
       <ItalicLine />
       <Title title="Education" />
       <SingleContainer>
-        <div>
-          <div>
-            <span>logo</span>
-            <span>mrpshop.in</span>
-          </div>
-          <div>
-            <div>
-              Mecanical engineer
-              <span>Internship | 2024-present</span>
-            </div>
-          </div>
-        </div>
+        <Education
+          logoSrc="https://vitam.edu.in/vitam/wp-content/uploads/2025/06/VITAM-LOGO-32x32.png"
+          name="Vignan Institute of Technology and Management"
+          course="B.Tech in Mechanical Engineering"
+          duration="2022 - 2025"
+        />
       </SingleContainer>
       <SingleContainer>
-        <div>
-          <div>
-            <span>logo</span>
-            <span>mrpshop.in</span>
-          </div>
-          <div>
-            <div>
-              Mecanical engineer
-              <span>Internship | 2024-present</span>
-            </div>
-          </div>
-        </div>
+        <Education
+          logoSrc="https://www.aumsaiengineering.co.in/images/favicon.png"
+          name="AUM SAI INSTITUTE OF TECHNICAL EDUCATION"
+          course="Diploma in Mechanical Engineering"
+          duration="2019 - 2022"
+        />
       </SingleContainer>
       <ItalicLine />
       <Title title="Link" />
       <DoubleBoxLine />
-      <div className="y-border">
-        <div className=" w-full  gap-4 grid grid-cols-2 mx-auto max-w-3xl ">
-          <div className="h-full x-border p-2">
-            <div>
-              <h2>logo</h2>
-              <div>
-                <span>linkedin</span>
-                <span>sudhansu sekhar behera</span>
-              </div>
-            </div>
-          </div>
-          <div className="h-full x-border p-2">
-            <div>
-              <h2>github logo</h2>
-              <div>
-                <span>github</span>
-                <span>@skehargit</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SocialLinks />
+
       <DoubleBoxLine />
     </div>
   );
