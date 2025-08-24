@@ -21,8 +21,7 @@ export default function LenisProvider({ children }: PropsWithChildren) {
 
     return () => {
       if (rafId) cancelAnimationFrame(rafId as number);
-      // @ts-ignore lenis types
-      lenis.destroy?.();
+      (lenis as unknown as { destroy?: () => void }).destroy?.();
     };
   }, []);
 

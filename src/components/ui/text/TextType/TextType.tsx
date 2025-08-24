@@ -1,6 +1,6 @@
 "use client";
 
-import { ElementType, useEffect, useRef, useState, createElement, useCallback } from "react";
+import { ElementType, useEffect, useRef, useState, createElement, useCallback, useMemo } from "react";
 import { gsap } from "gsap";
 import "./TextType.css";
 
@@ -54,7 +54,7 @@ const TextType = ({
   const cursorRef = useRef<HTMLSpanElement>(null);
   const containerRef = useRef<HTMLElement>(null);
 
-  const textArray = Array.isArray(text) ? text : [text];
+  const textArray = useMemo(() => (Array.isArray(text) ? text : [text]), [text]);
 
   const getRandomSpeed = useCallback(() => {
     if (!variableSpeed) return typingSpeed;
