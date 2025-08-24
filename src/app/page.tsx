@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import ThemeToggleButton from "@/components/ui/theme-toggle-button";
 import TextType from "@/components/ui/text/TextType/TextType";
@@ -20,6 +20,9 @@ import GitHubCalendar from "react-github-calendar";
 import Image from "next/image";
 export default function Home() {
   const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const colorScheme = useMemo(() => (resolvedTheme === "dark" ? "dark" : "light"), [resolvedTheme]);
   const pixelColor = resolvedTheme === "dark" ? "#000000" : "#ffffff";
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -141,13 +144,17 @@ export default function Home() {
       <Title title="Github Contributions" />
       <SingleContainer>
         <div className="w-full flex justify-center">
-          <GitHubCalendar
-            username="skehargit"
-            blockSize={9}
-            colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
-            blockRadius={20}
-            fontSize={12}
-          />
+          {mounted ? (
+            <GitHubCalendar
+              username="skehargit"
+              blockSize={9}
+              colorScheme={colorScheme}
+              blockRadius={20}
+              fontSize={12}
+            />
+          ) : (
+            <div className="h-[120px] w-full max-w-[700px]" aria-hidden />
+          )}
         </div>
       </SingleContainer>
       <ItalicLine />
