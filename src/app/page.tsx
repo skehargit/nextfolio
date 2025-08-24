@@ -176,11 +176,9 @@ export default function Home() {
           position="Game Developer"
           duration="Jul 2024 - Present"
           description={[
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Developing interactive and child-friendly games using React.",
+            "Enhancing gameplay experience with engaging animations and smooth UI.",
+            "Fixing existing bugs and improving performance of deployed games.",
           ]}
         />
       </SingleContainer>
@@ -192,11 +190,10 @@ export default function Home() {
           position="Frontend Developer"
           duration="Nov 2024 - Present"
           description={[
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Contributing to both frontend and backend development of MRP Shop, Seller, and Customer platforms.",
+            "Designing and developing responsive, user-friendly interfaces using React, Tailwind CSS, and modern design practices.",
+            "Integrating AI-powered features into the backend with Django, including OpenAI, Gemini, and Ideogram APIs.",
+            "Implementing image generation, text generation, and dynamic JSON data generation features based on user location.",
           ]}
         />
       </SingleContainer>
@@ -208,11 +205,10 @@ export default function Home() {
           position="Fullstack Developer"
           duration="Jul 2024 - Aug 2024"
           description={[
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae.",
+            "Built a full-stack web application from scratch using the MERN stack (MongoDB, Express, React, Node.js).",
+            "Designed and developed responsive frontend pages with React and Tailwind CSS.",
+            "Implemented backend APIs with Node.js and Express for smooth data flow.",
+            "Deployed and tested the complete website.",
           ]}
         />
       </SingleContainer>
@@ -235,6 +231,24 @@ export default function Home() {
           duration="2019 - 2022"
         />
       </SingleContainer>
+      {/* <ItalicLine />
+      <Title title="Certifications" />
+      <SingleContainer>
+        <Education
+          logoSrc="https://www.aumsaiengineering.co.in/images/favicon.png"
+          name="Forage"
+          course="Deloitte Australia - Cyber Job Simulation"
+          duration="Issued Jul 2025"
+        />
+      </SingleContainer>
+      <SingleContainer>
+        <Education
+          logoSrc="https://www.aumsaiengineering.co.in/images/favicon.png"
+          name="Code Help"
+          course="Web Development Bootcamp [ MERN Stack ]"
+          duration="Issued Jun 2024"
+        />
+      </SingleContainer> */}
       <ItalicLine />
       <Title title="Link" />
       <DoubleBoxLine />
