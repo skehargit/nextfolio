@@ -18,11 +18,15 @@ import Education from "@/components/sections/Education";
 import SocialLinks from "@/components/sections/SocialLinks";
 import GitHubCalendar from "react-github-calendar";
 import Image from "next/image";
+import Stacks from "@/components/sections/Stacks";
 export default function Home() {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
-  const colorScheme = useMemo(() => (resolvedTheme === "dark" ? "dark" : "light"), [resolvedTheme]);
+  const colorScheme = useMemo(
+    () => (resolvedTheme === "dark" ? "dark" : "light"),
+    [resolvedTheme]
+  );
   const pixelColor = resolvedTheme === "dark" ? "#000000" : "#ffffff";
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -126,7 +130,7 @@ export default function Home() {
           </li>
           <li className="flex items-center space-x-3">
             <Phone className="w-5 h-5 " />
-            <span className="">9876543210</span>
+            <span className="">(+91) 9078078242</span>
           </li>
           <li className="flex items-center space-x-3">
             <FileText className="w-5 h-5 " />
@@ -140,7 +144,11 @@ export default function Home() {
         <About />
       </SingleContainer>
       <ItalicLine />
-      {/* <Title title="Stack" /> */}
+      <Title title="Stack" />
+      <SingleContainer className="dotted-bg">
+        <Stacks />
+      </SingleContainer>
+      <ItalicLine />
       <Title title="Github Contributions" />
       <SingleContainer>
         <div className="w-full flex justify-center">
@@ -158,7 +166,8 @@ export default function Home() {
         </div>
       </SingleContainer>
       <ItalicLine />
-      <Title title="Projects" />
+
+      <Title title="Project" />
       <DoubleBoxLine />
       <MainPjConWrapper>
         <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
@@ -174,9 +183,11 @@ export default function Home() {
         </div>
       </MainPjConWrapper>
       <DoubleBoxLine />
-      <div className="y-border">
-        <div className="max-w-3xl  h-[25px] x-border mx-auto">
-          view all projects
+      <div className="y-border ">
+        <div className=" max-w-3xl  h-[40px] flex items-center justify-center  x-border mx-auto">
+          <span className="font-medium py-1 px-4 rounded-full cursor-pointer text-sm bg-zinc-800 w-fit">
+            view all projects
+          </span>
         </div>
       </div>
       <ItalicLine />

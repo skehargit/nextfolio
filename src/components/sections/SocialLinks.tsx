@@ -8,7 +8,7 @@ const SocialLinks = () => (
           <div className="relative">
             <div
               style={{ clipPath: "url(#squircleClip)" }}
-              className="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center shadow-lg border border-gray-600/50 cursor-pointer transform transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-2xl"
+              className="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center shadow-lg border border-gray-600/50 cursor-pointer transform transition-all duration-300 ease-out "
             >
               <svg
                 viewBox="0 0 24 24"
@@ -38,7 +38,7 @@ const SocialLinks = () => (
           <div className="relative">
             <div
               style={{ clipPath: "url(#squircleClip)" }}
-              className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg border border-blue-500/50 cursor-pointer transform transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-2xl"
+              className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg border border-blue-500/50 cursor-pointer transform transition-all duration-300 ease-out "
             >
               <svg
                 viewBox="0 0 24 24"
