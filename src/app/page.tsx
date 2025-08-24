@@ -61,15 +61,20 @@ export default function Home() {
                 <PixelTransition
                   firstContent={
                     <Image
-                      src="/profile-ghibli.jpg"
+                      src="/images/profile-ghibli.jpg"
                       alt="default pixel transition content, a cat!"
+                      width={150}
+                      height={150}
+                      className="object-cover"
                     />
                   }
                   secondContent={
                     <Image
-                      src="/profile.jpg"
+                      src="/images/profile.jpg"
                       alt="default pixel transition content, a cat!"
-                      className="-translate-y-2"
+                      width={150}
+                      height={150}
+                      className="-translate-y-2 object-cover"
                     />
                   }
                   gridSize={12}
@@ -232,24 +237,6 @@ export default function Home() {
           duration="2019 - 2022"
         />
       </SingleContainer>
-      {/* <ItalicLine />
-      <Title title="Certifications" />
-      <SingleContainer>
-        <Education
-          logoSrc="https://www.aumsaiengineering.co.in/images/favicon.png"
-          name="Forage"
-          course="Deloitte Australia - Cyber Job Simulation"
-          duration="Issued Jul 2025"
-        />
-      </SingleContainer>
-      <SingleContainer>
-        <Education
-          logoSrc="https://www.aumsaiengineering.co.in/images/favicon.png"
-          name="Code Help"
-          course="Web Development Bootcamp [ MERN Stack ]"
-          duration="Issued Jun 2024"
-        />
-      </SingleContainer> */}
       <ItalicLine />
       <Title title="Link" />
       <DoubleBoxLine />

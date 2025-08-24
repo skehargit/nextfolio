@@ -17,6 +17,8 @@ const Education = ({
         <Image
           src={logoSrc}
           alt={`${name} logo`}
+          width={32}
+          height={32}
           className="w-full h-full object-contain rounded-sm"
         />
       </div>
