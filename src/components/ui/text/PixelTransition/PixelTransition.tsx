@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useEffect, useState, CSSProperties } from "react";
 import { gsap } from "gsap";
 import "./PixelTransition.css";
@@ -31,9 +33,12 @@ const PixelTransition: React.FC<PixelTransitionProps> = ({
   const [isActive, setIsActive] = useState<boolean>(false);
 
   const isTouchDevice =
-    "ontouchstart" in window ||
-    navigator.maxTouchPoints > 0 ||
-    window.matchMedia("(pointer: coarse)").matches;
+    typeof window !== "undefined" &&
+    (("ontouchstart" in window) ||
+      (typeof navigator !== "undefined" &&
+        (navigator.maxTouchPoints > 0 ||
+          (typeof window.matchMedia === "function" &&
+            window.matchMedia("(pointer: coarse)").matches))));
 
   useEffect(() => {
     const pixelGridEl = pixelGridRef.current;

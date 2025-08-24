@@ -1,6 +1,6 @@
 import React from "react";
 import { ExternalLink } from "lucide-react";
-
+import Image from "next/image";
 const Experience = ({
   logoSrc,
   company,
@@ -19,7 +19,7 @@ const Experience = ({
   <div className="p-4 s-border rounded-md space-y-2">
     <div className="flex items-center space-x-3">
       <div className="h-8 w-8 flex items-center justify-center">
-        <img
+        <Image
           src={logoSrc}
           alt={`${company} logo`}
           className="w-full h-full object-contain rounded-sm"

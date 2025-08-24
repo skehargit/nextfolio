@@ -4,7 +4,6 @@ import React from "react";
 import WrapButton from "../ui/WrapButton";
 import ArrowSvg from "../ui/ArrowSvg";
 import FlipLink from "../ui/text-effect-flipper";
-import { TextScroll } from "../ui/text-scroll";
 const Hero = () => {
   return (
     <section

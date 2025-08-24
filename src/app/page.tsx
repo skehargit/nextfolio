@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import ThemeToggleButton from "@/components/ui/theme-toggle-button";
 import TextType from "@/components/ui/text/TextType/TextType";
@@ -17,6 +17,7 @@ import Experience from "@/components/sections/Experience";
 import Education from "@/components/sections/Education";
 import SocialLinks from "@/components/sections/SocialLinks";
 import GitHubCalendar from "react-github-calendar";
+import Image from "next/image";
 export default function Home() {
   const { resolvedTheme } = useTheme();
   const pixelColor = resolvedTheme === "dark" ? "#000000" : "#ffffff";
@@ -59,13 +60,13 @@ export default function Home() {
               <div className="w-[150px] h-[150px] rounded-full overflow-hidden">
                 <PixelTransition
                   firstContent={
-                    <img
+                    <Image
                       src="/profile-ghibli.jpg"
                       alt="default pixel transition content, a cat!"
                     />
                   }
                   secondContent={
-                    <img
+                    <Image
                       src="/profile.jpg"
                       alt="default pixel transition content, a cat!"
                       className="-translate-y-2"

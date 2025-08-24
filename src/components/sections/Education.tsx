@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 const Education = ({
   logoSrc,
   name,
@@ -14,7 +14,7 @@ const Education = ({
   <div className="p-4 s-border  rounded-md   space-y-2">
     <div className="flex items-center space-x-2">
       <div className="h-8 w-8 flex items-center justify-center">
-        <img
+        <Image
           src={logoSrc}
           alt={`${name} logo`}
           className="w-full h-full object-contain rounded-sm"
