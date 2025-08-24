@@ -161,14 +161,14 @@ export default function Home() {
       <Title title="Projects" />
       <DoubleBoxLine />
       <MainPjConWrapper>
-        <div className="gap-4 grid grid-cols-2">
+        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
           <MainProjectContainer />
           <MainProjectContainer />
         </div>
       </MainPjConWrapper>
       <DoubleBoxLine />
       <MainPjConWrapper>
-        <div className="gap-4 grid grid-cols-2">
+        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
           <MainProjectContainer />
           <MainProjectContainer />
         </div>
