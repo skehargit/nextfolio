@@ -275,7 +275,14 @@ body::-webkit-scrollbar {
   border-right: 1px solid var(--edge);
   width: 100%;
 }
-
+.b-border { 
+  border-bottom: 1px solid var(--edge);
+  width: 100%;
+}
+.t-border { 
+  border-top: 1px solid var(--edge);
+  width: 100%;
+}
 .s-border{
   border: 1px solid var(--edge);
 }

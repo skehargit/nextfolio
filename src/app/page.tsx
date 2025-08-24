@@ -1,11 +1,8 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
-import Lenis from "@studio-freight/lenis";
-import ThemeToggleButton from "@/components/ui/theme-toggle-button";
 import TextType from "@/components/ui/text/TextType/TextType";
 import PixelTransition from "@/components/ui/text/PixelTransition/PixelTransition";
 import { useTheme } from "next-themes";
-import { MapPin, Phone, Mail, FileText } from "lucide-react";
 import ItalicLine from "@/components/ui/lines/ItalicLine";
 import Title from "@/components/ui/lines/Title";
 import SingleContainer from "@/components/ui/lines/SingleContainer";
@@ -18,7 +15,10 @@ import Education from "@/components/sections/Education";
 import SocialLinks from "@/components/sections/SocialLinks";
 import GitHubCalendar from "react-github-calendar";
 import Image from "next/image";
+import Link from "next/link";
 import Stacks from "@/components/sections/Stacks";
+import Contact from "@/components/sections/Contact";
+import Navbar from "@/components/shared/Navbar";
 export default function Home() {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -28,31 +28,10 @@ export default function Home() {
     [resolvedTheme]
   );
   const pixelColor = resolvedTheme === "dark" ? "#000000" : "#ffffff";
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const lenis = new Lenis({
-      lerp: 0.1,
-    });
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col  ">
-      <div className="y-border h-12 mt-2">
-        <div className="max-w-3xl x-border h-full mx-auto flex justify-between items-center">
-          <div className="px-4">
-            <div className="font-sharpie-bold text-2xl">SSB</div>
-          </div>
-          <ThemeToggleButton variant="circle" start="center" />
-        </div>
-      </div>
+      <Navbar/>
 
       <div className=" w-full">
         <div className="max-w-3xl h-[150px] x-border mx-auto dotted-bg flex items-center justify-center">
@@ -119,24 +98,7 @@ export default function Home() {
       </div>
       <ItalicLine />
       <SingleContainer>
-        <ul className="space-y-4">
-          <li className="flex items-center space-x-3">
-            <MapPin className="w-5 h-5 " />
-            <span className="">From Odisha, India</span>
-          </li>
-          <li className="flex items-center space-x-3">
-            <Mail className="w-5 h-5 " />
-            <span className="">sudhansusekharweb@gmail.com</span>
-          </li>
-          <li className="flex items-center space-x-3">
-            <Phone className="w-5 h-5 " />
-            <span className="">(+91) 9078078242</span>
-          </li>
-          <li className="flex items-center space-x-3">
-            <FileText className="w-5 h-5 " />
-            <span className="">Resume</span>
-          </li>
-        </ul>
+        <Contact/>
       </SingleContainer>
       <ItalicLine />
       <Title title="About" />
@@ -185,9 +147,15 @@ export default function Home() {
       <DoubleBoxLine />
       <div className="y-border ">
         <div className=" max-w-3xl  h-[40px] flex items-center justify-center  x-border mx-auto">
-          <span className="font-medium py-1 px-4 rounded-full cursor-pointer text-sm bg-zinc-800 w-fit">
+          <Link
+            href="/projects"
+            className="font-medium py-1 px-4 cursor-pointer text-sm w-fit
+            bg-zinc-200 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100
+            transition-colors "
+            aria-label="View all projects"
+          >
             view all projects
-          </span>
+          </Link>
         </div>
       </div>
       <ItalicLine />
@@ -198,6 +166,7 @@ export default function Home() {
           company="eklavya.me"
           website="https://eklavya.me"
           position="Game Developer"
+          type="Internship"
           duration="Jul 2024 - Present"
           description={[
             "Developing interactive and child-friendly games using React.",
@@ -212,6 +181,7 @@ export default function Home() {
           company="mrpshop.in"
           website="https://mrpshop.in"
           position="Frontend Developer"
+          type="Internship"
           duration="Nov 2024 - Present"
           description={[
             "Contributing to both frontend and backend development of MRP Shop, Seller, and Customer platforms.",
@@ -227,6 +197,7 @@ export default function Home() {
           company="highimpacttalent.com"
           website="https://highimpacttalent.com"
           position="Fullstack Developer"
+          type="Internship"
           duration="Jul 2024 - Aug 2024"
           description={[
             "Built a full-stack web application from scratch using the MERN stack (MongoDB, Express, React, Node.js).",
@@ -244,6 +215,7 @@ export default function Home() {
           logoSrc="https://vitam.edu.in/vitam/wp-content/uploads/2025/06/VITAM-LOGO-32x32.png"
           name="Vignan Institute of Technology and Management"
           course="B.Tech in Mechanical Engineering"
+          type="Full-time"
           duration="2022 - 2025"
         />
       </SingleContainer>
@@ -252,6 +224,7 @@ export default function Home() {
           logoSrc="https://www.aumsaiengineering.co.in/images/favicon.png"
           name="AUM SAI INSTITUTE OF TECHNICAL EDUCATION"
           course="Diploma in Mechanical Engineering"
+          type="Full-time"
           duration="2019 - 2022"
         />
       </SingleContainer>

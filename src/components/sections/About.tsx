@@ -3,7 +3,6 @@ import React from "react";
 const About = () => {
   return (
     <section className="text-sm space-y-6 text-left">
-      <h2 className="text-lg font-semibold">About Me</h2>
       <p className="leading-relaxed">
         Hi, I’m <strong>Sudhansu Sekhar Behera</strong>, a passionate{" "}
         <strong>MERN Stack Developer</strong> specializing in building modern,

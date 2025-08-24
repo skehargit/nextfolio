@@ -5,11 +5,13 @@ const Education = ({
   name,
   course,
   duration,
+  type
 }: {
   logoSrc: string;
   name: string;
   course: string;
   duration: string;
+  type: string;
 }) => (
   <div className="p-4 s-border  rounded-md   space-y-2">
     <div className="flex items-center space-x-2">
@@ -27,6 +29,8 @@ const Education = ({
 
     <div className="text-xs ">
       <span className="font-medium">{course}</span>
+      <span className="mx-1">|</span>
+      <span>{type}</span>
       <span className="mx-1">|</span>
       <span>{duration}</span>
     </div>

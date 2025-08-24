@@ -8,6 +8,7 @@ const Experience = ({
   position,
   duration,
   description,
+  type
 }: {
   logoSrc: string;
   company: string;
@@ -15,6 +16,7 @@ const Experience = ({
   position: string;
   duration: string;
   description: string[];
+  type: string;
 }) => (
   <div className="p-4 s-border rounded-md space-y-2">
     <div className="flex items-center space-x-3">
@@ -34,6 +36,8 @@ const Experience = ({
     </div>
     <div className="text-sm ">
       <span className="font-medium">{position}</span>
+      <span className="mx-1">|</span>
+      <span>{type}</span>
       <span className="mx-1">|</span>
       <span>{duration}</span>
     </div>

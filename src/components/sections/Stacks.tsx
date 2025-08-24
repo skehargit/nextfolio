@@ -8,30 +8,30 @@ type StackItem =
   | { name: string; srcLight: string; srcDark: string };
 
 const stacks: StackItem[] = [
-  { name: "React", src: "/svg/react.svg" },
+  { name: "React", src: "/svg/stack/react.svg" },
   {
     name: "Next.js",
-    srcLight: "/svg/nextjs-light.svg",
-    srcDark: "/svg/nextjs-dark.svg",
+    srcLight: "/svg/stack/nextjs-light.svg",
+    srcDark: "/svg/stack/nextjs-dark.svg",
   },
-  { name: "TypeScript", src: "/svg/typescript.svg" },
-  { name: "JavaScript", src: "/svg/js.svg" },
-  { name: "Redux", src: "/svg/redux.svg" },
-  { name: "Tailwind CSS", src: "/svg/tailwindcss.svg" },
-  { name: "Node.js", src: "/svg/nodejs.svg" },
+  { name: "TypeScript", src: "/svg/stack/typescript.svg" },
+  { name: "JavaScript", src: "/svg/stack/js.svg" },
+  { name: "Redux", src: "/svg/stack/redux.svg" },
+  { name: "Tailwind CSS", src: "/svg/stack/tailwindcss.svg" },
+  { name: "Node.js", src: "/svg/stack/nodejs.svg" },
   {
     name: "express",
-    srcLight: "/svg/express-light.svg",
-    srcDark: "/svg/express-dark.svg",
+    srcLight: "/svg/stack/express-light.svg",
+    srcDark: "/svg/stack/express-dark.svg",
   },
-  { name: "MongoDB", src: "/svg/mongodb.svg" },
-  { name: "Python", src: "/svg/python.svg" },
-  { name: "Django", src: "/svg/django.svg" },
+  { name: "MongoDB", src: "/svg/stack/mongodb.svg" },
+  { name: "Python", src: "/svg/stack/python.svg" },
+  { name: "Django", src: "/svg/stack/django.svg" },
 
-  { name: "Git", src: "/svg/git.svg" },
-  { name: "Docker", src: "/svg/docker.svg" },
+  { name: "Git", src: "/svg/stack/git.svg" },
+  { name: "Docker", src: "/svg/stack/docker.svg" },
 
-  { name: "Photoshop", src: "/svg/ps.svg" },
+  { name: "Photoshop", src: "/svg/stack/ps.svg" },
 ];
 
 const Stacks = () => {
