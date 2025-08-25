@@ -13,7 +13,7 @@ const Education = ({
   duration: string;
   type: string;
 }) => (
-  <div className="p-4 s-border  rounded-md   space-y-2">
+  <div className="  rounded-md   space-y-2">
     <div className="flex items-center space-x-2">
       <div className="h-8 w-8 flex items-center justify-center">
         <Image

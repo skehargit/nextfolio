@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col  ">
-      <Navbar/>
+      <Navbar />
 
       <div className=" w-full">
         <div className="max-w-3xl h-[150px] x-border mx-auto dotted-bg flex items-center justify-center">
@@ -98,7 +98,7 @@ export default function Home() {
       </div>
       <ItalicLine />
       <SingleContainer>
-        <Contact/>
+        <Contact />
       </SingleContainer>
       <ItalicLine />
       <Title title="About" />
@@ -132,107 +132,173 @@ export default function Home() {
       <Title title="Project" />
       <DoubleBoxLine />
       <MainPjConWrapper>
-        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
+        <div className="gap-0 sm:gap-4 grid grid-cols-1 sm:grid-cols-2">
           <MainProjectContainer />
+          <div className="y-border grid grid-cols-2 gap-4 sm:hidden">
+            <div className="p-2 r-border"></div>
+            <div className="p-2 l-border"></div>
+          </div>
           <MainProjectContainer />
         </div>
       </MainPjConWrapper>
       <DoubleBoxLine />
       <MainPjConWrapper>
-        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
+        <div className="gap-0 sm:gap-4 grid grid-cols-1 sm:grid-cols-2">
           <MainProjectContainer />
+          <div className="y-border grid grid-cols-2 gap-4 sm:hidden">
+            <div className="p-2 r-border"></div>
+            <div className="p-2 l-border"></div>
+          </div>
           <MainProjectContainer />
         </div>
       </MainPjConWrapper>
       <DoubleBoxLine />
-      <div className="y-border ">
-        <div className=" max-w-3xl  h-[40px] flex items-center justify-center  x-border mx-auto">
+      <div className="y-border">
+        <div className="max-w-3xl x-border mx-auto">
+          <div className=" b-border flex justify-between items-center">
+            <div className="p-2 r-border "></div>
+            <div className="p-2 l-border "></div>
+          </div>
           <Link
             href="/projects"
-            className="font-medium py-1 px-4 cursor-pointer text-sm w-fit
-            bg-zinc-200 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100
-            transition-colors "
             aria-label="View all projects"
+            className="mx-4 cursor-pointer bg-zinc-200 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100
+            transition-colors flex justify-center"
           >
-            view all projects
+            <div className="font-medium text-sm py-1">View all projects</div>
           </Link>
+          <div className="t-border flex justify-between items-center">
+            <div className="p-2 r-border"></div>
+            <div className="p-2 l-border"></div>
+          </div>
         </div>
       </div>
       <ItalicLine />
       <Title title="Experience" />
-      <SingleContainer>
-        <Experience
-          logoSrc="https://eklavya.me/wp-content/uploads/2023/05/eklogoup.png"
-          company="eklavya.me"
-          website="https://eklavya.me"
-          position="Game Developer"
-          type="Internship"
-          duration="Jul 2024 - Present"
-          description={[
-            "Developing interactive and child-friendly games using React.",
-            "Enhancing gameplay experience with engaging animations and smooth UI.",
-            "Fixing existing bugs and improving performance of deployed games.",
-          ]}
-        />
-      </SingleContainer>
-      <SingleContainer>
-        <Experience
-          logoSrc="https://res.cloudinary.com/db7pikwo4/image/upload/v1754579764/MRPICON_dhyfzz.jpg"
-          company="mrpshop.in"
-          website="https://mrpshop.in"
-          position="Frontend Developer"
-          type="Internship"
-          duration="Nov 2024 - Present"
-          description={[
-            "Contributing to both frontend and backend development of MRP Shop, Seller, and Customer platforms.",
-            "Designing and developing responsive, user-friendly interfaces using React, Tailwind CSS, and modern design practices.",
-            "Integrating AI-powered features into the backend with Django, including OpenAI, Gemini, and Ideogram APIs.",
-            "Implementing image generation, text generation, and dynamic JSON data generation features based on user location.",
-          ]}
-        />
-      </SingleContainer>
-      <SingleContainer>
-        <Experience
-          logoSrc="https://res.cloudinary.com/db7pikwo4/image/upload/v1754579904/1721203270689_cjmvud.jpg"
-          company="highimpacttalent.com"
-          website="https://highimpacttalent.com"
-          position="Fullstack Developer"
-          type="Internship"
-          duration="Jul 2024 - Aug 2024"
-          description={[
-            "Built a full-stack web application from scratch using the MERN stack (MongoDB, Express, React, Node.js).",
-            "Designed and developed responsive frontend pages with React and Tailwind CSS.",
-            "Implemented backend APIs with Node.js and Express for smooth data flow.",
-            "Deployed and tested the complete website.",
-          ]}
-        />
-      </SingleContainer>
-
+      <div className="max-w-3xl w-full x-border mx-auto">
+        <div className=" b-border flex justify-between items-center">
+          <div className="p-2 r-border"></div>
+          <div className="p-2 l-border"></div>
+        </div>
+        <div className="p-4 mx-4 x-border ">
+          <Experience
+            logoSrc="https://eklavya.me/wp-content/uploads/2023/05/eklogoup.png"
+            company="eklavya.me"
+            website="https://eklavya.me"
+            position="Game Developer"
+            type="Internship"
+            duration="Jul 2024 - Present"
+            description={[
+              "Developing interactive and child-friendly games using React.",
+              "Enhancing gameplay experience with engaging animations and smooth UI.",
+              "Fixing existing bugs and improving performance of deployed games.",
+            ]}
+          />
+        </div>
+        <div className="t-border  flex justify-between items-center">
+          <div className="px-2 py-1 r-border"></div>
+          <div className="px-2 py-1 l-border"></div>
+        </div>
+      </div>
+      <div className="max-w-3xl x-border mx-auto w-full">
+        <div className=" b-border flex justify-between items-center">
+          <div className="py-1 px-2 r-border"></div>
+          <div className="py-1 px-2 l-border"></div>
+        </div>
+        <div className="p-4 mx-4 x-border">
+          <Experience
+            logoSrc="https://res.cloudinary.com/db7pikwo4/image/upload/v1754579764/MRPICON_dhyfzz.jpg"
+            company="mrpshop.in"
+            website="https://mrpshop.in"
+            position="Frontend Developer"
+            type="Internship"
+            duration="Nov 2024 - Present"
+            description={[
+              "Contributing to both frontend and backend development of MRP Shop, Seller, and Customer platforms.",
+              "Designing and developing responsive, user-friendly interfaces using React, Tailwind CSS, and modern design practices.",
+              "Integrating AI-powered features into the backend with Django, including OpenAI, Gemini, and Ideogram APIs.",
+              "Implementing image generation, text generation, and dynamic JSON data generation features based on user location.",
+            ]}
+          />
+        </div>
+        <div className="t-border flex justify-between items-center">
+          <div className="px-2 py-1 r-border"></div>
+          <div className="px-2 py-1 l-border"></div>
+        </div>
+      </div>
+      <div className="max-w-3xl x-border mx-auto w-full">
+        <div className=" b-border flex justify-between items-center">
+          <div className="px-2 py-1 r-border"></div>
+          <div className="px-2 py-1 l-border"></div>
+        </div>
+        <div className="p-4 mx-4 x-border">
+          <Experience
+            logoSrc="https://res.cloudinary.com/db7pikwo4/image/upload/v1754579904/1721203270689_cjmvud.jpg"
+            company="highimpacttalent.com"
+            website="https://highimpacttalent.com"
+            position="Fullstack Developer"
+            type="Internship"
+            duration="Jul 2024 - Aug 2024"
+            description={[
+              "Built a full-stack web application from scratch using the MERN stack (MongoDB, Express, React, Node.js).",
+              "Designed and developed responsive frontend pages with React and Tailwind CSS.",
+              "Implemented backend APIs with Node.js and Express for smooth data flow.",
+              "Deployed and tested the complete website.",
+            ]}
+          />
+        </div>
+        <div className="t-border flex justify-between items-center">
+          <div className="p-2 r-border"></div>
+          <div className="p-2 l-border"></div>
+        </div>
+      </div>
       <ItalicLine />
       <Title title="Education" />
-      <SingleContainer>
-        <Education
-          logoSrc="https://vitam.edu.in/vitam/wp-content/uploads/2025/06/VITAM-LOGO-32x32.png"
-          name="Vignan Institute of Technology and Management"
-          course="B.Tech in Mechanical Engineering"
-          type="Full-time"
-          duration="2022 - 2025"
-        />
-      </SingleContainer>
-      <SingleContainer>
-        <Education
-          logoSrc="https://www.aumsaiengineering.co.in/images/favicon.png"
-          name="AUM SAI INSTITUTE OF TECHNICAL EDUCATION"
-          course="Diploma in Mechanical Engineering"
-          type="Full-time"
-          duration="2019 - 2022"
-        />
-      </SingleContainer>
+      <div className="max-w-3xl x-border mx-auto w-full">
+        <div className=" b-border flex justify-between items-center">
+          <div className="p-2 r-border"></div>
+          <div className="p-2 l-border"></div>
+        </div>
+        <div className="p-4 mx-4 x-border">
+          <Education
+            logoSrc="https://vitam.edu.in/vitam/wp-content/uploads/2025/06/VITAM-LOGO-32x32.png"
+            name="Vignan Institute of Technology and Management"
+            course="B.Tech in Mechanical Engineering"
+            type="Full-time"
+            duration="2022 - 2025"
+          />
+        </div>
+        <div className="t-border flex justify-between items-center">
+          <div className="px-2 py-1 r-border"></div>
+          <div className="px-2 py-1 l-border"></div>
+        </div>
+      </div>
+      <div className="max-w-3xl x-border mx-auto w-full">
+        <div className=" b-border flex justify-between items-center">
+          <div className="px-2 py-1 r-border"></div>
+          <div className="px-2 py-1 l-border"></div>
+        </div>
+        <div className="p-4 mx-4 x-border">
+          <Education
+            logoSrc="https://www.aumsaiengineering.co.in/images/favicon.png"
+            name="AUM SAI INSTITUTE OF TECHNICAL EDUCATION"
+            course="Diploma in Mechanical Engineering"
+            type="Full-time"
+            duration="2019 - 2022"
+          />
+        </div>
+        <div className="t-border flex justify-between items-center">
+          <div className="p-2 r-border"></div>
+          <div className="p-2 l-border"></div>
+        </div>
+      </div>
+
       <ItalicLine />
       <Title title="Link" />
       <DoubleBoxLine />
       <SocialLinks />
 
+      <DoubleBoxLine />
       <DoubleBoxLine />
     </div>
   );

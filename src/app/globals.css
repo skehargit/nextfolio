@@ -1,49 +1,48 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
 @font-face {
-  font-family: 'Array';
-  src: url('/fonts/Array-SemiboldWide.otf') format('opentype');
+  font-family: "Array";
+  src: url("/fonts/Array-SemiboldWide.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Erode';
-  src: url('/fonts/Erode-Semibold.otf') format('opentype');
+  font-family: "Erode";
+  src: url("/fonts/Erode-Semibold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Switzer';
-  src: url('/fonts/Switzer-SemiboldItalic.otf') format('opentype');
+  font-family: "Switzer";
+  src: url("/fonts/Switzer-SemiboldItalic.otf") format("opentype");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'OpenSans-Bold';
-  src: url('/fonts/OpenSans-Bold.ttf') format('truetype');
+  font-family: "OpenSans-Bold";
+  src: url("/fonts/OpenSans-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'OpenSans-SemiBold';
-  src: url('/fonts/OpenSans-SemiBold.ttf') format('truetype');
+  font-family: "OpenSans-SemiBold";
+  src: url("/fonts/OpenSans-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Sharpie-Bold';
-  src: url('/fonts/Sharpie-Bold.otf') format('opentype');
+  font-family: "Sharpie-Bold";
+  src: url("/fonts/Sharpie-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -208,8 +207,8 @@
 }
 body {
   /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   box-sizing: border-box;
   background-color: var(--background);
 }
@@ -221,37 +220,54 @@ body::-webkit-scrollbar {
 
 /* Font utility classes */
 .font-opensans-bold {
-  font-family: 'OpenSans-Bold', Arial, Helvetica, sans-serif !important;
+  font-family: "OpenSans-Bold", Arial, Helvetica, sans-serif !important;
   font-weight: bold;
 }
 .font-opensans-semibold {
-  font-family: 'OpenSans-SemiBold', Arial, Helvetica, sans-serif !important;
+  font-family: "OpenSans-SemiBold", Arial, Helvetica, sans-serif !important;
   font-weight: 600;
 }
 
 .font-array {
-  font-family: 'Array', Arial, Helvetica, sans-serif !important;
+  font-family: "Array", Arial, Helvetica, sans-serif !important;
 }
 .font-erode {
-  font-family: 'Erode', Arial, Helvetica, sans-serif !important;
+  font-family: "Erode", Arial, Helvetica, sans-serif !important;
 }
 .font-switzer {
-  font-family: 'Switzer', Arial, Helvetica, sans-serif !important;
+  font-family: "Switzer", Arial, Helvetica, sans-serif !important;
 }
-.font-sharpie-bold{
-  font-family: 'Sharpie-Bold', Arial, Helvetica, sans-serif !important;
+.font-sharpie-bold {
+  font-family: "Sharpie-Bold", Arial, Helvetica, sans-serif !important;
 }
-.dotted-bg{
-  background-image: radial-gradient(circle 5px at top left, var(--edge) 0%, var(--edge) 50%,var(--edge) 50%, var(--edge) 30%,transparent 30%, transparent 50%),linear-gradient(90deg, rgba(0,0,0, 0),rgba(0,0,0, 0)); background-size: 11px 11px;
+.dotted-bg {
+  background-image: radial-gradient(
+      circle 5px at top left,
+      var(--edge) 0%,
+      var(--edge) 50%,
+      var(--edge) 50%,
+      var(--edge) 30%,
+      transparent 30%,
+      transparent 50%
+    ),
+    linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background-size: 11px 11px;
 }
-.italic-lines-bg{
-  background-image: repeating-linear-gradient(135deg, var(--edge) 0px, var(--edge) 1px,transparent 1px, transparent 6px);
+.italic-lines-bg {
+  background-image: repeating-linear-gradient(
+    135deg,
+    var(--edge) 0px,
+    var(--edge) 1px,
+    transparent 1px,
+    transparent 6px
+  );
 }
 
 .animated-line {
   height: 6px;
   width: 60px;
-  --c:no-repeat repeating-linear-gradient(90deg,#ffffff 0 3px,#ffffff00 0 6px);
+  --c: no-repeat
+    repeating-linear-gradient(90deg, #ffffff 0 3px, #ffffff00 0 6px);
   background: var(--c), var(--c);
   background-size: 100% 3px;
   animation: l9 1s infinite;
@@ -259,30 +275,44 @@ body::-webkit-scrollbar {
 @keyframes l9 {
   0%,
   70%,
-  100%   {background-position: 0   50%,3px 50% }
-  23.33% {background-position: 0   0  ,3px 100%}
-  46.67% {background-position: 3px 0  ,0   100%}
-  69.99% {background-position: 3px 50%,0   50% }
+  100% {
+    background-position: 0 50%, 3px 50%;
+  }
+  23.33% {
+    background-position: 0 0, 3px 100%;
+  }
+  46.67% {
+    background-position: 3px 0, 0 100%;
+  }
+  69.99% {
+    background-position: 3px 50%, 0 50%;
+  }
 }
 
 .y-border {
-  border-top: 1px solid var(--edge); 
+  border-top: 1px solid var(--edge);
   border-bottom: 1px solid var(--edge);
   width: 100%;
 }
 .x-border {
-  border-left: 1px solid var(--edge); 
+  border-left: 1px solid var(--edge);
   border-right: 1px solid var(--edge);
-  width: 100%;
+  /* width: 100%; */
 }
-.b-border { 
+.b-border {
   border-bottom: 1px solid var(--edge);
   width: 100%;
 }
-.t-border { 
+.t-border {
   border-top: 1px solid var(--edge);
   width: 100%;
 }
-.s-border{
+.r-border {
+  border-right: 1px solid var(--edge);
+}
+.l-border {
+  border-left: 1px solid var(--edge);
+}
+.s-border {
   border: 1px solid var(--edge);
 }
