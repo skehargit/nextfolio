@@ -9,8 +9,8 @@ export default function HeroSection({ pixelColor }: { pixelColor: string }) {
   return (
     <div className="y-border">
       <div className="max-w-3xl flex x-border mx-auto ">
-        <div className="border-r border-zinc-800">
-          <div className="border border-zinc-800 p-1 rounded-full w-fit">
+        <div className="r-border">
+          <div className="s-border p-1 rounded-full w-fit">
             <div className="w-[150px] h-[150px] rounded-full overflow-hidden">
               <PixelTransition
                 firstContent={
