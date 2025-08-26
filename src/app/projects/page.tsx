@@ -1,55 +1,25 @@
 import Navbar from "@/components/shared/Navbar";
 import Title from "@/components/ui/lines/Title";
-import MainPjConWrapper from "@/components/ui/lines/MainPjConWrapper";
 import DoubleBoxLine from "@/components/ui/lines/DoubleBoxLine";
-import MainProjectContainer from "@/components/ui/MainProjectContainer";
 import PathView from "@/components/shared/PathView";
-import ItalicLine from "@/components/ui/lines/ItalicLine";
+import { chunkProjectArray } from "@/lib/arrayUtils";
+import { projects } from "@/data/projects";
+import PairProject from "@/components/ui/PairProject";
 
 export default function ProjectsPage() {
+  const chunkedProjects = chunkProjectArray(projects, 2);
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <PathView />
-      <ItalicLine />
       <Title title="Projects" />
       <DoubleBoxLine />
-      <MainPjConWrapper>
-        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
-          <MainProjectContainer />
-          <MainProjectContainer />
+      {chunkedProjects.map((pair, idx) => (
+        <div key={idx}>
+          <PairProject pair={pair} idx={idx} />
+          <DoubleBoxLine />
         </div>
-      </MainPjConWrapper>
-      <DoubleBoxLine />
-      <MainPjConWrapper>
-        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
-          <MainProjectContainer />
-          <MainProjectContainer />
-        </div>
-      </MainPjConWrapper>
-      <DoubleBoxLine />
-      <MainPjConWrapper>
-        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
-          <MainProjectContainer />
-          <MainProjectContainer />
-        </div>
-      </MainPjConWrapper>
-      <DoubleBoxLine />
-      <MainPjConWrapper>
-        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
-          <MainProjectContainer />
-          <MainProjectContainer />
-        </div>
-      </MainPjConWrapper>
-      <DoubleBoxLine />
-      <MainPjConWrapper>
-        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
-          <MainProjectContainer />
-          <MainProjectContainer />
-        </div>
-      </MainPjConWrapper>
-      
-      <DoubleBoxLine />
+      ))}
     </div>
   );
 }

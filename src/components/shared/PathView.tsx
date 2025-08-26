@@ -30,7 +30,7 @@ const PathView: React.FC<PathViewProps> = ({ nextHref, nextLabel = "Next", class
   const nextDisabled = !nextHref;
 
   return (
-    <div className={`b-border ${className}`}>
+    <div className={`${className}`}>
       <div className="max-w-3xl mx-auto p-1 x-border flex items-center justify-between gap-3">
         {/* Breadcrumb */}
         <nav className="px-4 py-2 text-sm overflow-x-auto whitespace-nowrap no-scrollbar" aria-label="Breadcrumb">

@@ -25,9 +25,8 @@ export default function ResumePage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <PathView />
-      <ItalicLine />
       <Title title="Resume" />
-      <div className="max-w-3xl mx-auto x-border p-4 space-y-3">
+      <div className="w-full max-w-3xl mx-auto x-border p-4 space-y-3">
         <div className="flex justify-center gap-2">
           <a
             href={downloadUrl}

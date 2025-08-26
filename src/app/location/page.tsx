@@ -8,9 +8,9 @@ export default function LocationPage() {
     <div className="min-h-screen flex flex-col">
       <Navbar/>
       <PathView />
-      <ItalicLine />
+      {/* <ItalicLine /> */}
       <Title title="Location" />
-      <div className="max-w-3xl mx-auto p-4 x-border space-y-4">
+      <div className="w-full max-w-3xl mx-auto p-4 x-border space-y-4">
         <p className="text-sm text-muted-foreground">Odisha, India.</p>
         <div className="aspect-video s-border rounded-md overflow-hidden">
           <iframe
